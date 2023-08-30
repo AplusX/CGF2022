@@ -80,7 +80,7 @@
       <div class="post-content">
         <!-- Abstract -->
         <h1>Abstract</h1>
-        <p class="justified">Digital cameras can only capture a limited range of real-world scenes' luminance, producing images with saturated pixels. Existing single image high dynamic range (HDR) reconstruction methods attempt to expand the range of luminance, but are not able to hallucinate plausible textures, producing results with artifacts in the saturated areas. In this paper, we present a novel learning-based approach to reconstruct an HDR image by recovering the saturated pixels of an input LDR image in a visually pleasing way. Previous deep learning-based methods apply the same convolutional filters on well-exposed and saturated pixels, creating ambiguity during training and leading to checkerboard and halo artifacts. To overcome this problem, we propose a feature masking mechanism that reduces the contribution of the features from the saturated areas. Moreover, we adapt the VGG-based perceptual loss function to our application to be able to synthesize visually pleasing textures. Since the number of HDR images for training is limited, we propose to train our system in two stages. Specifically, we first train our system on a large number of images for image inpainting task and then fine-tune it on HDR reconstruction. Since most of the HDR examples contain smooth regions that are simple to reconstruct, we propose a sampling strategy to select challenging training patches during the HDR fine-tuning stage. We demonstrate through experimental results that our approach can reconstruct visually pleasing HDR results, better than the current state of the art on a wide range of scenes.</p>
+        <p class="justified">Monoscopic panorama provides the display of omnidirectional contents surrounding the viewer. An increasingly popular way to reconstruct a panorama is to stitch a collection of fisheye images. However, such non-planar views may result in problems such as distortions and boundary irregularities. In most cases, the computational expense for stitching non-planar images is also too high to satisfy real-time applications. In this paper, a novel monoscopic panorama reconstruction pipeline that produces better quad-fisheye image stitching results for omnidirectional environment viewing is proposed. The main idea is to apply mesh deformation for image alignment. To optimize inter-lens parallaxes, unwarped images are firstly cropped and reshuffled to facilitate the circular environment scene composition by the seamless ring-connection of the panorama borders. Several mesh constraints are then adopted to ensure a high alignment accuracy. After alignment, the boundary of the result is rectified to be rectangular to prevent gapping artifacts. We further extend our approach to video stitching. The temporal smoothness model is added to prevent unexpected artifacts in the panoramic videos. To support interactive applications, our stitching algorithm is programmed using CUDA. The camera motion and average gradient per video frame are further calculated to accelerate for synchronous real-life panoramic scene reconstruction and visualization. Experimental results demonstrate that our method has advantages in respects of alignment accuracy, adaptability and image quality of the stitching result.</p>
 
         <!-- Download links -->
 
@@ -110,10 +110,10 @@
 
         <!-- Thanks -->
 
-        <h1>Acknowledgments</h1>
+<!--         <h1>Acknowledgments</h1>
         <p class="justified">
           We thank the reviewers for their constructive comments. M. Santos is funded by the Brazilian agency CNPQ grant 161268/2018-8. T. Ren is partially supported by FACEPE grant APQ-0192- 1.03/14. N. Kalantari is in part funded by a TAMU T3 grant 246451. The website template was borrowed from <a href="https://joeylitalien.github.io/">Joey Litalien</a>.
-        </p>
+        </p> -->
 
 
         <!-- BibTeX citation -->
@@ -121,26 +121,27 @@
         <h1>Cite</h1>
         <blockquote class="justified">
 
-          <a href="https://marcelsan.github.io/">Marcel Santana Santos</a>,
+          <a href="https://github.com/AplusX">Haojie Cheng</a>,
 
-          <a href="https://www.cin.ufpe.br/~tir/">Tsang Ing Ren</a>
+          <a href="">Chunxiao Xu</a>
+		  
+		  <a href="">Jiajun Wang</a>
 
           and 
 
-          <a href="http://faculty.cs.tamu.edu/nimak/">Nima Khademi Kalantari</a>.
+          <a href="">Lingxiao Zhao</a>.
 
-          Single Image HDR Reconstruction Using a CNN with Masked Features and Perceptual Loss. <i>ACM Transactions on Graphics</i>, 39, 4, Article 80 (July 2020).
+          Quad-fisheye Image Stitching for Monoscopic Panorama Reconstruction. <i>Computer Graphics Forum (CGF)</i>, 2022, 41(6), pp. 94-109.
         </blockquote>
 
-<pre><code>@article{Marcel:2020:LDRHDR,
-author = {Santos, Marcel Santana and Tsang, Ren and Khademi Kalantari, Nima},
-title = {Single Image HDR Reconstruction Using a CNN with Masked Features and Perceptual Loss},
-journal = {ACM Transactions on Graphics},
-volume = {39},
-number = {4},
-year = {2020},
-month = {7},
-doi = {10.1145/3386569.3392403}
+<pre><code>@article{Cheng2022CGF,
+  author = "Cheng, Haojie and Xu, Chunxiao and Wang, Jiajun and Zhao, Lingxiao",
+  title = "{Quad-fisheye Image Stitching for Monoscopic Panorama Reconstruction}",
+  year = "2022",
+  month = may,
+  journal = "Computer Graphics Forum",
+  doi     = {10.1111/cgf.14512},
+  pages = "94--109"
 }
 </code></pre>
 
